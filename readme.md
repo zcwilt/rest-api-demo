@@ -19,7 +19,7 @@ then
 
 php artisan migrate
 
-server the project however you normally do, using sever or valet
+serve the project however you normally do, using serve or valet
 
 The home page will show links that use various filters.
 
