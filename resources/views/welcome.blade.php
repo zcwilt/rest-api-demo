@@ -33,16 +33,16 @@
     </ul>
         <ul>
             <li>
-                <a href="api/user?whereBetween=age:19:70" target="_blank">User Age betwen 19 - 70</a>
+                <a href="api/user?whereBetween[]=age:19:70" target="_blank">User Age betwen 19 - 70</a>
             </li>
             <li>
-                <a href="api/user?whereBetween=age:19:70&orWhere=id:eq:1" target="_blank">User Age betwen 19 - 70 or user id =1 </a>
+                <a href="api/user?whereBetween[]=age:19:70&orWhere[]=id:eq:1" target="_blank">User Age betwen 19 - 70 or user id =1 </a>
             </li>
             <li>
                 <a href="api/user?whereIn=id:(1,2,3)" target="_blank">User Id in (1,2,3)</a>
             </li>
             <li>
-                <a href="api/user?whereIn=id:(1,2,3)&orWhere=age:eq:64" target="_blank">User Id in (1,2,3) or age = 64</a>
+                <a href="api/user?whereIn[]=id:(1,2,3)&orWhere[]=age:eq:64" target="_blank">User Id in (1,2,3) or age = 64</a>
             </li>
         </ul>
         </ul>
@@ -51,12 +51,12 @@
                 <a href="api/user?includes=posts" target="_blank">user with posts</a>
             </li>
             <li>
-                <a href="api/user?includes=posts&where=id:eq:1" target="_blank">user with posts and user id = 1</a>
+                <a href="api/user?includes[]=posts&where[]=id:eq:1" target="_blank">user with posts and user id = 1</a>
             </li>
         </ul>
         <ul>
             <li>
-                <a href="api/post?includes=comments" target="_blank">posts with comments</a>
+                <a href="api/post?includes[]=comments" target="_blank">posts with comments</a>
             </li>
         </ul>
         <ul>
