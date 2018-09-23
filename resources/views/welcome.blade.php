@@ -70,6 +70,20 @@
                 <a href="api/country?paginate=no" target="_blank">no paginate</a>
             </li>
         </ul>
+        <ul>
+            <li>
+                <a href="api/user?join[]=inner:posts:posts.user_id:users.id" target="_blank">inner join</a>
+            </li>
+            <li>
+                <a href="api/user?join[]=left:posts:posts.user_id:users.id" target="_blank">left join</a>
+            </li>
+            <li>
+                <a href="api/user?join[]=cross:posts:posts.user_id:users.id" target="_blank">cross join</a>
+            </li>
+            <li>
+                <a href="api/user?join[]=inner:posts:posts.user_id:users.id&where[]=published:eq:1" target="_blank">inner join with where</a>
+            </li>
+        </ul>
     </div>
 </div>
 </body>
