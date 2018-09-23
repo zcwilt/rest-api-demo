@@ -7,83 +7,88 @@
 
     <title>zcwilt-api-demo</title>
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Styles -->
 </head>
 <body>
 <div class="">
-    <h1>Some api access links</h1>
     <div class="content">
-
-    <ul>
-        <li>
-            <a href="api/user" target="_blank">User Index</a>
-        </li>
-        <li>
-            <a href="api/country" target="_blank">Country Index</a>
-        </li>
-        <li>
-            <a href="api/post" target="_blank">Post Index</a>
-        </li>
-        <li>
-            <a href="api/comment" target="_blank">Comment Index</a>
-        </li>
-    </ul>
-        <ul>
-            <li>
-                <a href="api/user?whereBetween[]=age:19:70" target="_blank">User Age betwen 19 - 70</a>
-            </li>
-            <li>
-                <a href="api/user?whereBetween[]=age:19:70&orWhere[]=id:eq:1" target="_blank">User Age betwen 19 - 70 or user id =1 </a>
-            </li>
-            <li>
-                <a href="api/user?whereIn=id:(1,2,3)" target="_blank">User Id in (1,2,3)</a>
-            </li>
-            <li>
-                <a href="api/user?whereIn[]=id:(1,2,3)&orWhere[]=age:eq:64" target="_blank">User Id in (1,2,3) or age = 64</a>
-            </li>
-        </ul>
-        </ul>
-        <ul>
-            <li>
-                <a href="api/user?includes=posts" target="_blank">user with posts</a>
-            </li>
-            <li>
-                <a href="api/user?includes[]=posts&where[]=id:eq:1" target="_blank">user with posts and user id = 1</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="api/post?includes[]=comments" target="_blank">posts with comments</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="api/country?per_page=5" target="_blank">per_page</a>
-            </li>
-            <li>
-                <a href="api/country?per_page=5&page=2" target="_blank">per_page & page</a>
-            </li>
-            <li>
-                <a href="api/country?paginate=no" target="_blank">no paginate</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="api/user?join[]=inner:posts:posts.user_id:users.id" target="_blank">inner join</a>
-            </li>
-            <li>
-                <a href="api/user?join[]=left:posts:posts.user_id:users.id" target="_blank">left join</a>
-            </li>
-            <li>
-                <a href="api/user?join[]=cross:posts:posts.user_id:users.id" target="_blank">cross join</a>
-            </li>
-            <li>
-                <a href="api/user?join[]=inner:posts:posts.user_id:users.id&where[]=published:eq:1" target="_blank">inner join with where</a>
-            </li>
-        </ul>
+        <h1 class="text-center">Some api access links</h1>
+        <div class="row">
+            <div class="col-sm">
+                <div class="list-group">
+                    <h2>Basic Api Controller Calls</h2>
+                    <a class="list-group-item list-group-item-action" href="api/user" target="_blank">User Index</a>
+                    <a class="list-group-item list-group-item-action" href="api/country" target="_blank">Country
+                        Index</a>
+                    <a class="list-group-item list-group-item-action" href="api/post" target="_blank">Post Index</a>
+                    <a class="list-group-item list-group-item-action" href="api/comment" target="_blank">Comment
+                        Index</a>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="list-group">
+                    <h2>Some where based filters</h2>
+                    <a class="list-group-item list-group-item-action" href="api/user?whereBetween[]=age:19:70"
+                       target="_blank">User
+                        Age betwen 19 - 70</a>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?whereBetween[]=age:19:70&orWhere[]=id:eq:1"
+                       target="_blank">User Age betwen 19 - 70 or
+                        user id =1 </a>
+                    <a class="list-group-item list-group-item-action" href="api/user?whereIn=id:(1,2,3)"
+                       target="_blank">User
+                        Id
+                        in (1,2,3)</a>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?whereIn[]=id:(1,2,3)&orWhere[]=age:eq:64"
+                       target="_blank">User Id in (1,2,3) or age =
+                        64</a>
+                </div>
+            </div>
+            <div class="col-s">
+                <div class="list-group">
+                    <h2>Includes</h2>
+                    <a class="list-group-item list-group-item-action" href="api/user?includes=posts" target="_blank">user
+                        with posts</a>
+                    <a class="list-group-item list-group-item-action" href="api/user?includes[]=posts&where[]=id:eq:1"
+                       target="_blank">user with posts and user id = 1</a>
+                    <a class="list-group-item list-group-item-action" href="api/post?includes[]=comments"
+                       target="_blank">posts
+                        with comments</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="list-group">
+                    <h2>Pagination</h2>
+                    <a class="list-group-item list-group-item-action" href="api/country?per_page=5"
+                       target="_blank">per_page</a>
+                    <a class="list-group-item list-group-item-action" href="api/country?per_page=5&page=2"
+                       target="_blank">per_page
+                        & page</a>
+                    <a class="list-group-item list-group-item-action" href="api/country?paginate=no" target="_blank">no
+                        paginate</a>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="list-group">
+                    <h2>Joins</h2>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?join[]=inner:posts:posts.user_id:users.id" target="_blank">inner join</a>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?join[]=left:posts:posts.user_id:users.id" target="_blank">left join</a>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?join[]=cross:posts:posts.user_id:users.id" target="_blank">cross join</a>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?join[]=inner:posts:posts.user_id:users.id&where[]=published:eq:1" target="_blank">inner
+                        join with where</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
