@@ -88,6 +88,21 @@
                         join with where</a>
                 </div>
             </div>
+            <div class="col-sm">
+                <div class="list-group">
+                    <h2>Misc.</h2>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?sort[]=age" target="_blank">Sort by Age(ASC)</a>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?sort[]=-age" target="_blank">Sort by Age(DESC)</a>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?columns[]=name,age" target="_blank">limit columns returned (name,age)</a>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?withTrashed" target="_blank">with trashed</a>
+                    <a class="list-group-item list-group-item-action"
+                       href="api/user?onlyTrashed" target="_blank">only trashed</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

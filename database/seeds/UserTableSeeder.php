@@ -16,6 +16,7 @@ class UserTableSeeder extends Seeder
             'password' => Hash::make( 'password' ) ,
             'name' => 'user1' ,
             'age' => 16 ,
+            'deleted_at' => now(),
         ] );
         App\User::create( [
             'email' => 'user2@test.com' ,
@@ -40,6 +41,7 @@ class UserTableSeeder extends Seeder
             'password' => Hash::make( 'password' ) ,
             'name' => 'user5' ,
             'age' => 64 ,
+            'deleted_at' => now(),
         ] );
         App\User::create( [
             'email' => 'user6@test.com' ,
